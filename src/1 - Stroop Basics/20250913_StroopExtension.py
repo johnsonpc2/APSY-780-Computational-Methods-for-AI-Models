@@ -133,13 +133,10 @@ def analyze_rts(data):
 results = generate_rts(n_trials=500, n_subs=6, remove_practice=20)
 
 results.to_csv(
-    '~/OneDrive/Desktop/APSY 780 Computational Methods for AI/stroop_data.csv',
-    index=False
-)
+    f'{wd}/src/1 - Stroop Basics/output/stroop_data.csv',
+    index=False)
 
-data = pd.read_csv(
-    '~/OneDrive/Desktop/APSY 780 Computational Methods for AI/stroop_data.csv'
-)
+data = pd.read_csv(f'{wd}/src/1 - Stroop Basics/output/stroop_data.csv')
 
 analyze_rts(data)
 
@@ -148,8 +145,11 @@ sns.boxplot(data, x="condition", y="rt")
 plt.title("Group-Level Stroop RTs")
 plt.ylabel("Reaction Time (ms)")
 plt.xlabel("Condition")
-plt.savefig('C:/Users/johns/OneDrive/Desktop/APSY 780 Computational Methods for AI/20250913_GroupStroopPlot.png',
-            dpi=600, bbox_inches='tight')
+plt.savefig(
+    fname=f'{wd}/src/1 - Stroop Basics/output/20250913_GroupStroopPlot.png',
+    dpi=600,
+    bbox_inches='tight'
+)
 plt.show()
 
 plt.figure(figsize=(8, 6))
@@ -158,6 +158,9 @@ plt.title("RT by Condition for All Subjects")
 plt.ylabel("Reaction Time (ms)")
 plt.xlabel("Condition")
 plt.legend(title="Subject", bbox_to_anchor=(1.05, 1), loc='upper left')
-plt.savefig('C:/Users/johns/OneDrive/Desktop/APSY 780 Computational Methods for AI/20250913_IndividualStroopPlot.png',
-            dpi=600, bbox_inches='tight')
+plt.savefig(
+    fname=f'{wd}/src/1 - Stroop Basics/output/20250913_IndividualStroopPlot.png',
+    dpi=600,
+    bbox_inches='tight'
+)
 plt.show()
