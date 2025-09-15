@@ -7,6 +7,7 @@ Created on Wed Sep 10 13:18:03 2025
 import numpy as np
 
 
+# Create a new class called coin that can be flipped
 class Coin:
     """
     A simple class for a coin. Has value of coin and sides.
@@ -15,10 +16,10 @@ class Coin:
 
     sides = ['heads', 'tails']  # class attributes, shared by all instances
 
-    def __init__(self, value=25):  # constructor
+    def __init__(self, value=25, seed=10):  # constructor
         self.value = value  # an instance attribute specific to this instance
         self.side_up = self.sides[0]
-        self.rng = np.random.default_rng(seed=50)
+        self.rng = np.random.default_rng(seed)
 
     def __repr__(self):
         return f"I'm a Coin. My value is {self.value} and I'm facing {self.side_up} side up."
