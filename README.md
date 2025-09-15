@@ -27,8 +27,6 @@ This project is configured to work with Spyder IDE. The `.spyderproject` and `.s
 
 ## Usage
 
-[Add specific usage instructions as you develop the project]
+To generate the results from the project files I have uploaded, all you need to do is download the files, run the scripts, and data CSVs and plots will be generated and saved to the "~/src/1 - Stroop Basics/output" directory.
 
-## Contributing
-
-[Add contribution guidelines if applicable]
+NB: You may need to create the directories in order for the plots and data files to be generated; however, I have alos uploaded those with my script file, so you can look at them either way.
